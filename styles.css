@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html, body{
+    max-height: 100%;
+}  
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(217, 54%,11%);
+  display: grid;
+  place-content: center;
+}
+
+.container{
+  margin: 3rem 1.5rem;
+  border-radius: 0.7rem;
+  background-color: hsl(216, 50%, 16%);
+  display: grid;
+  height: 70vh;
+  width: 350px;
+
+}
+
+.nft__pic{
+  margin: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.img__over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%, 0.5);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 1rem;
+}
+
+.img__over img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.nft__pic:hover .img__over {
+  opacity: 5;
+  background-color: hsl(178, 100%, 50%, 0.5);
+}
+
+
+.image{
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+  height: 99%;
+}
+
+.product{
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 0rem 1rem 0rem 1rem;
+  cursor: pointer;
+}
+
+.product:hover{
+  color: hsl(178, 100%, 50%);
+}
+
+.product__d{
+  color: hsl(215, 51%, 70%);
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0rem 2rem 0rem 1rem;
+  line-height: 1.5;
+}
+
+.product__offer{
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 1rem 0rem 1rem;
+  border-bottom: solid  hsl(215, 32%, 27%) 0.5px;
+  
+}
+
+.price{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+
+.offer{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: hsl(215, 51%, 70%);
+  font-weight: 600;
+}
+
+.author{
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+.avatar{
+  border: solid white 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.author__c{
+  color: hsl(215, 51%, 70%);
+  margin-left: 1rem;
+}
+
+.author__n{
+  color: hsl(0, 0%, 100%);
+   margin-left: 0.5rem;
+   cursor: pointer;
+}
+
+.author__n:hover{
+  color: hsl(178, 100%, 50%);
+}
+
+
+.attribution { 
+  padding-top: 1rem;
+  font-size: 11px; 
+  text-align: center; 
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution a { 
+  color: hsl(215, 51%, 44%);
+ }
